@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aquvera Water Solutions | Luxury Water Softeners for Delhi-NCR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ===== TOKENS ===== */
+:root {
+  --navy:     #0D1B3E;
+  --navy-dk:  #080F24;
+  --navy-lt:  #162349;
+  --navy-xlt: #1E2F5C;
+  --teal:     #4AB8D8;
+  --teal-lt:  #6DCCE8;
+  --teal-dk:  #30A0C0;
+  --teal-pale:#D8F0F8;
+  --gold:     #F59E0B;
+  --white:    #FFFFFF;
+  --off:      #F0F5FA;
+  --off2:     #E6EFF8;
+  --border:   #C8DCF0;
+  --text:     #0D1B3E;
+  --sub:      #3A4F7A;
+  --muted:    #7A90B8;
+  --star:     #F59E0B;
+  --green:    #22C55E;
+  --red:      #EF4444;
+  --radius:   14px;
+  --shadow:   0 8px 32px rgba(13,27,62,.12);
+  --shadow-lg:0 20px 60px rgba(13,27,62,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:'Outfit',sans-serif;cursor:pointer;border:none;outline:none}
+
+/* ===== TOPBAR ===== */
+.topbar{
+  background:var(--navy-dk);
+  color:var(--white);
+  font-size:.8rem;
+  font-weight:500;
+  letter-spacing:.04em;
+  padding:0;
+  overflow:hidden;
+  height:36px;
+  display:flex;align-items:center;
+  position:relative;
+}
+.topbar-track{
+  display:flex;
+  white-space:nowrap;
+  animation:marqueeScroll 28s linear infinite;
+  gap:0;
+}
+.topbar-track span{
+  padding:0 48px;
+  opacity:.85;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.topbar-track span b{color:var(--teal);opacity:1;}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== NAV ===== */
+.nav{
+  position:sticky;top:0;z-index:900;
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s,background .3s;
+}
+.nav.scrolled{box-shadow:0 4px 24px rgba(13,27,62,.12);background:rgba(255,255,255,.97);backdrop-filter:blur(12px);}
+.nav-inner{
+  max-width:1200px;margin:0 auto;
+  padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-mark{
+  width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:900;color:var(--white);letter-spacing:-.03em;
+  flex-shrink:0;
+}
+.nav-logo-text{font-size:1.2rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1;}
+.nav-logo-text span{color:var(--teal);}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--sub);transition:color .2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-cta{
+  background:var(--navy);color:var(--white);
+  padding:10px 22px;border-radius:50px;
+  font-size:.88rem;font-weight:700;letter-spacing:.02em;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  white-space:nowrap;
+}
+.nav-cta:hover{background:var(--navy-xlt);transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,27,62,.25);}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  background:linear-gradient(155deg,var(--navy-dk) 0%,var(--navy) 55%,var(--navy-xlt) 100%);
+  overflow:hidden;
+  padding:80px 24px 60px;
+  min-height:680px;
+  display:flex;align-items:center;
+}
+#hero-canvas{position:absolute;inset:0;opacity:.45;}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1200px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(74,184,216,.18);
+  border:1px solid rgba(74,184,216,.35);
+  border-radius:50px;
+  padding:6px 16px;
+  font-size:.8rem;font-weight:600;color:var(--teal-lt);
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:22px;
+}
+.hero-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.hero-h1{
+  font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;color:var(--white);
+  line-height:1.1;letter-spacing:-.03em;margin-bottom:16px;
+  text-wrap:balance;
+}
+.hero-h1 .rotate-wrap{
+  display:inline-block;overflow:hidden;height:1.15em;vertical-align:bottom;
+}
+.hero-h1 .rotate-inner{
+  display:flex;flex-direction:column;
+  animation:wordRotate 4.8s steps(1,end) infinite;
+}
+.hero-h1 .rotate-inner span{
+  display:block;height:1.15em;color:var(--teal-lt);
+  font-style:italic;
+}
+@keyframes wordRotate{
+  0%,24%{transform:translateY(0)}
+  25%,49%{transform:translateY(-1.15em)}
+  50%,74%{transform:translateY(-2.3em)}
+  75%,99%{transform:translateY(-3.45em)}
+}
+.hero-sub{
+  font-size:1.1rem;font-weight:400;color:rgba(255,255,255,.72);
+  max-width:520px;margin-bottom:32px;line-height:1.7;
+}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+  border-radius:50px;padding:6px 14px;
+  font-size:.82rem;font-weight:600;color:rgba(255,255,255,.85);
+}
+.hero-badge svg{flex-shrink:0;}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-stat{}
+.hero-stat-num{font-size:1.9rem;font-weight:900;color:var(--white);letter-spacing:-.04em;line-height:1;}
+.hero-stat-lbl{font-size:.78rem;font-weight:500;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
+
+/* HERO FORM */
+.hero-form-card{
+  background:var(--white);
+  border-radius:20px;
+  padding:36px 30px;
+  box-shadow:0 24px 80px rgba(0,0,0,.35);
+  position:relative;
+  z-index:2;
+}
+.hf-title{font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:4px;text-wrap:balance;}
+.hf-sub{font-size:.85rem;color:var(--sub);margin-bottom:22px;line-height:1.5;}
+.hf-field{margin-bottom:14px;}
+.hf-label{font-size:.8rem;font-weight:600;color:var(--sub);display:block;margin-bottom:5px;letter-spacing:.02em;}
+.hf-input{
+  width:100%;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:12px 16px;
+  font-family:'Outfit',sans-serif;
+  font-size:.95rem;font-weight:500;
+  color:var(--navy);
+  background:var(--off);
+  transition:border .2s,box-shadow .2s;
+  outline:none;
+}
+.hf-input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(74,184,216,.15);background:var(--white);}
+.hf-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A5778' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+.hf-btn{
+  width:100%;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-xlt) 100%);
+  color:var(--white);
+  padding:15px;border-radius:12px;
+  font-size:1rem;font-weight:800;letter-spacing:.02em;
+  margin-top:4px;
+  transition:transform .15s,box-shadow .2s;
+  box-shadow:0 6px 24px rgba(13,27,62,.35);
+}
+.hf-btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(13,27,62,.45);}
+.hf-wa{
+  width:100%;
+  background:#25D366;
+  color:var(--white);
+  padding:12px;border-radius:12px;
+  font-size:.9rem;font-weight:700;
+  margin-top:10px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:transform .15s,box-shadow .2s;
+}
+.hf-wa:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.4);}
+.hf-privacy{font-size:.75rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.5;}
+
+/* ===== TICKER MARQUEE ===== */
+.ticker{
+  background:var(--teal-pale);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:14px 0;overflow:hidden;
+}
+.ticker-track{
+  display:flex;white-space:nowrap;
+  animation:marqueeScroll 22s linear infinite;
+}
+.ticker-track span{
+  padding:0 40px;
+  font-size:.88rem;font-weight:600;color:var(--navy);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.ticker-track span::before{content:'✦';color:var(--teal);font-size:.7rem;}
+
+/* ===== SECTION COMMONS ===== */
+.section{padding:80px 24px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-eyebrow{
+  font-size:.78rem;font-weight:700;color:var(--teal-dk);
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;
+}
+.section-h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;color:var(--navy);letter-spacing:-.03em;line-height:1.15;text-wrap:balance;}
+.section-sub{font-size:1.05rem;color:var(--sub);margin-top:12px;max-width:600px;line-height:1.7;}
+.center{text-align:center;}
+.center .section-sub{margin-left:auto;margin-right:auto;}
+
+/* REVEAL */
+.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease;}
+.will-animate .reveal{opacity:0;transform:translateY(36px);}
+.will-animate .reveal.visible{opacity:1;transform:none;}
+.will-animate .reveal.from-left{transform:translateX(-40px);}
+.will-animate .reveal.from-right{transform:translateX(40px);}
+.will-animate .reveal.from-left.visible,.will-animate .reveal.from-right.visible{transform:none;}
+
+/* ===== WATER HARDNESS (Delhi context) ===== */
+.hardness{background:var(--off);border-bottom:1px solid var(--border);}
+.hardness-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px;}
+.hardness-map{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-xlt) 100%);
+  border-radius:20px;padding:40px 32px;
+  color:var(--white);
+}
+.hardness-map h3{font-size:1.3rem;font-weight:800;margin-bottom:6px;}
+.hardness-map p{font-size:.88rem;color:rgba(255,255,255,.65);margin-bottom:28px;}
+.hardness-bar-row{margin-bottom:18px;}
+.hb-top{display:flex;justify-content:space-between;margin-bottom:6px;}
+.hb-city{font-size:.88rem;font-weight:600;color:var(--white);}
+.hb-val{font-size:.88rem;font-weight:700;color:var(--teal-lt);}
+.hb-track{height:8px;background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden;}
+.hb-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal-dk),var(--teal-lt));width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1);}
+.hardness-facts{}
+.hardness-fact{
+  display:flex;gap:16px;margin-bottom:20px;
+  padding:20px;background:var(--white);border-radius:14px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(13,27,62,.05);
+  transition:transform .2s,box-shadow .2s;
+}
+.hardness-fact:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.hardness-fact-icon{
+  width:46px;height:46px;border-radius:12px;flex-shrink:0;
+  background:var(--teal-pale);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;
+}
+.hardness-fact-text h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.hardness-fact-text p{font-size:.84rem;color:var(--sub);line-height:1.5;}
+
+/* ===== BENEFITS ===== */
+.benefits-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;
+}
+.benefit-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:18px;
+  padding:30px 24px;
+  text-align:center;
+  position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+  cursor:default;
+}
+.benefit-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(74,184,216,.04) 0%,transparent 60%);
+  opacity:0;transition:opacity .3s;
+}
+.benefit-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--teal);}
+.benefit-card:hover::before{opacity:1;}
+.benefit-icon{
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal-pale) 0%,var(--off) 100%);
+  margin:0 auto 16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;
+  box-shadow:0 4px 16px rgba(74,184,216,.2);
+}
+.benefit-card h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.benefit-card p{font-size:.87rem;color:var(--sub);line-height:1.6;}
+.benefit-tag{
+  display:inline-block;margin-top:12px;
+  background:var(--teal-pale);color:var(--teal-dk);
+  font-size:.75rem;font-weight:700;letter-spacing:.05em;
+  padding:4px 12px;border-radius:50px;text-transform:uppercase;
+}
+
+/* ===== STATS BAND ===== */
+.stats-band{
+  background:linear-gradient(135deg,var(--navy-dk) 0%,var(--navy) 100%);
+  padding:56px 24px;
+}
+.stats-grid{
+  max-width:1000px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  text-align:center;
+}
+.stat-item{}
+.stat-num{
+  font-size:2.8rem;font-weight:900;color:var(--white);
+  letter-spacing:-.04em;line-height:1;
+}
+.stat-num span{color:var(--teal-lt);}
+.stat-lbl{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);margin-top:6px;text-transform:uppercase;letter-spacing:.07em;}
+.stat-divider{width:40px;height:2px;background:var(--teal);margin:10px auto 0;border-radius:2px;}
+
+/* ===== HOW IT WORKS ===== */
+.how{background:var(--off);}
+.steps{display:flex;gap:0;margin-top:60px;position:relative;}
+.steps::before{
+  content:'';position:absolute;
+  top:36px;left:calc(16.66% + 24px);right:calc(16.66% + 24px);
+  height:2px;background:var(--border);z-index:0;
+}
+.steps-line{
+  position:absolute;
+  top:36px;left:calc(16.66% + 24px);
+  width:0;height:2px;
+  background:linear-gradient(90deg,var(--teal-dk),var(--teal-lt));
+  z-index:1;transition:width 1.2s cubic-bezier(.22,1,.36,1);
+}
+.step{flex:1;text-align:center;padding:0 16px;position:relative;z-index:2;}
+.step-num{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--white);border:3px solid var(--border);
+  margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;font-weight:900;color:var(--navy);
+  position:relative;transition:border-color .3s,box-shadow .3s;
+}
+.step-num::after{
+  content:'';position:absolute;inset:-8px;border-radius:50%;
+  border:2px solid var(--teal);opacity:0;
+  animation:stepRing 3s ease-out infinite;
+}
+.step:nth-child(2) .step-num::after{animation-delay:.6s;}
+.step:nth-child(3) .step-num::after{animation-delay:1.2s;}
+.step:nth-child(4) .step-num::after{animation-delay:1.8s;}
+@keyframes stepRing{0%{opacity:.7;transform:scale(.85)}70%{opacity:0;transform:scale(1.4)}100%{opacity:0;transform:scale(1.4)}}
+.step h3{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.step p{font-size:.87rem;color:var(--sub);line-height:1.6;}
+.step-icon{font-size:1.6rem;margin-bottom:10px;}
+
+/* ===== PRODUCTS ===== */
+.products-tabs{
+  display:flex;gap:0;margin:40px auto 40px;
+  background:var(--off);border-radius:12px;border:1.5px solid var(--border);
+  overflow:hidden;width:fit-content;
+}
+.ptab{
+  padding:12px 28px;font-size:.9rem;font-weight:700;color:var(--sub);
+  background:transparent;transition:background .2s,color .2s;cursor:pointer;
+}
+.ptab.active{background:var(--navy);color:var(--white);}
+.products-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.product-panel{display:none;}
+.product-panel.active{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.prod-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:18px;
+  padding:28px 22px;
+  position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.prod-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+.prod-card.popular{border-color:var(--teal);}
+.popular-badge{
+  position:absolute;top:16px;right:16px;
+  background:var(--gold);color:var(--white);
+  font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  padding:4px 12px;border-radius:50px;
+}
+.prod-model{font-size:.8rem;font-weight:700;color:var(--teal-dk);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.prod-name{font-size:1.15rem;font-weight:800;color:var(--navy);margin-bottom:4px;}
+.prod-use{font-size:.84rem;color:var(--sub);margin-bottom:20px;}
+.prod-icon{
+  font-size:2.2rem;margin-bottom:16px;
+}
+.prod-specs{margin-bottom:20px;}
+.prod-spec{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--off2);font-size:.85rem;}
+.prod-spec:last-child{border-bottom:none;}
+.prod-spec-label{color:var(--sub);font-weight:500;}
+.prod-spec-val{color:var(--navy);font-weight:700;}
+.prod-btn{
+  width:100%;background:var(--navy);color:var(--white);
+  padding:13px;border-radius:10px;font-size:.9rem;font-weight:700;
+  transition:background .2s,transform .15s;
+}
+.prod-btn:hover{background:var(--navy-xlt);transform:translateY(-1px);}
+.prod-card.popular .prod-btn{background:linear-gradient(135deg,var(--teal-dk),var(--teal));}
+
+/* ===== TECHNOLOGY ===== */
+.tech{background:linear-gradient(155deg,var(--navy-dk) 0%,var(--navy) 100%);color:var(--white);}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:48px;}
+.tech-features{display:flex;flex-direction:column;gap:22px;}
+.tech-feat{
+  display:flex;gap:18px;
+  padding:22px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  transition:background .25s,border-color .25s;
+}
+.tech-feat:hover{background:rgba(255,255,255,.1);border-color:rgba(74,184,216,.3);}
+.tech-feat-icon{
+  width:52px;height:52px;border-radius:14px;flex-shrink:0;
+  background:rgba(74,184,216,.15);border:1px solid rgba(74,184,216,.25);
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+}
+.tech-feat-text h4{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:4px;}
+.tech-feat-text p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.tech-visual{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;padding:40px 32px;text-align:center;
+}
+.tech-vis-title{font-size:1.15rem;font-weight:700;color:var(--white);margin-bottom:28px;}
+.filter-row{margin-bottom:20px;}
+.fr-labels{display:flex;justify-content:space-between;margin-bottom:7px;}
+.fr-name{font-size:.84rem;font-weight:600;color:rgba(255,255,255,.8);}
+.fr-pct{font-size:.84rem;font-weight:700;color:var(--teal-lt);}
+.fr-track{height:9px;background:rgba(255,255,255,.1);border-radius:5px;overflow:hidden;}
+.fr-bar{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--teal-dk),var(--teal-lt));width:0;transition:width 1.3s cubic-bezier(.22,1,.36,1);}
+.tech-cert{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;justify-content:center;
+}
+.cert-pill{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  border-radius:50px;padding:7px 18px;
+  font-size:.78rem;font-weight:600;color:rgba(255,255,255,.75);
+}
+
+/* ===== REVIEWS ===== */
+.reviews{background:var(--off);}
+.reviews-track-outer{overflow:hidden;margin-top:48px;mask-image:linear-gradient(90deg,transparent,black 80px,black calc(100% - 80px),transparent);}
+.reviews-track{display:flex;gap:20px;animation:reviewScroll 35s linear infinite;}
+.reviews-track:hover{animation-play-state:paused;}
+@keyframes reviewScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.review-card{
+  min-width:310px;max-width:310px;
+  background:var(--white);border:1.5px solid var(--border);border-radius:18px;
+  padding:24px;flex-shrink:0;
+}
+.review-stars{color:var(--star);font-size:1rem;margin-bottom:10px;letter-spacing:1px;}
+.review-text{font-size:.9rem;color:var(--sub);line-height:1.65;margin-bottom:14px;font-style:italic;}
+.review-name{font-size:.85rem;font-weight:700;color:var(--navy);}
+.review-loc{font-size:.78rem;color:var(--muted);}
+
+/* ===== WHY AQUVERA ===== */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px;}
+.why-card{
+  text-align:center;padding:32px 20px;
+  background:var(--white);border:1.5px solid var(--border);border-radius:18px;
+  transition:transform .25s,box-shadow .25s;
+}
+.why-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+.why-icon{font-size:2.2rem;margin-bottom:14px;}
+.why-card h4{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.why-card p{font-size:.85rem;color:var(--sub);line-height:1.6;}
+
+/* ===== TRUST ===== */
+.trust{background:var(--navy);padding:40px 24px;}
+.trust-inner{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  color:rgba(255,255,255,.75);font-size:.88rem;font-weight:600;
+}
+.trust-item svg{flex-shrink:0;}
+.trust-sep{width:1px;height:28px;background:rgba(255,255,255,.15);}
+
+/* ===== CTA BAND ===== */
+.cta-band{
+  background:linear-gradient(135deg,var(--teal-dk) 0%,var(--teal) 100%);
+  padding:72px 24px;text-align:center;
+}
+.cta-band h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--white);letter-spacing:-.03em;margin-bottom:12px;text-wrap:balance;}
+.cta-band p{font-size:1.05rem;color:rgba(255,255,255,.82);margin-bottom:32px;}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.cta-btn-main{
+  background:var(--navy);color:var(--white);
+  padding:16px 36px;border-radius:50px;
+  font-size:1rem;font-weight:800;letter-spacing:.02em;
+  transition:transform .15s,box-shadow .2s;
+  box-shadow:0 6px 24px rgba(13,27,62,.4);
+}
+.cta-btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(13,27,62,.5);}
+.cta-btn-wa{
+  background:#25D366;color:var(--white);
+  padding:16px 32px;border-radius:50px;
+  font-size:1rem;font-weight:700;
+  display:flex;align-items:center;gap:9px;
+  transition:transform .15s,box-shadow .2s;
+  box-shadow:0 6px 24px rgba(37,211,102,.4);
+}
+.cta-btn-wa:hover{transform:translateY(-2px);}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--navy-dk);color:rgba(255,255,255,.7);padding:56px 24px 32px;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand{}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.footer-logo-mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy-xlt),var(--teal-dk));display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;color:var(--white);}
+.footer-logo-text{font-size:1.1rem;font-weight:800;color:var(--white);letter-spacing:-.02em;}
+.footer-logo-text span{color:var(--teal);}
+.footer-tagline{font-size:.88rem;line-height:1.65;margin-bottom:20px;}
+.footer-contact-item{display:flex;align-items:center;gap:8px;font-size:.85rem;margin-bottom:9px;}
+.footer-col-title{font-size:.85rem;font-weight:700;color:var(--white);letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px;}
+.footer-link{display:block;font-size:.88rem;margin-bottom:10px;transition:color .2s;}
+.footer-link:hover{color:var(--teal-lt);}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;gap:12px;font-size:.8rem;}
+.footer-bottom a{color:var(--muted);transition:color .2s;}
+.footer-bottom a:hover{color:var(--teal-lt);}
+
+/* ===== STICKY MOBILE CTA ===== */
+.sticky-cta{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:950;
+  padding:12px 16px;
+  background:var(--white);
+  border-top:1px solid var(--border);
+  box-shadow:0 -6px 24px rgba(13,27,62,.12);
+  gap:10px;
+}
+.sticky-cta-btn{
+  flex:1;padding:13px;border-radius:10px;font-size:.9rem;font-weight:800;
+  text-align:center;
+}
+.sticky-cta-main{background:var(--navy);color:var(--white);}
+.sticky-cta-wa{background:#25D366;color:var(--white);display:flex;align-items:center;justify-content:center;gap:7px;}
+
+/* ===== TOAST ===== */
+.toast{
+  position:fixed;bottom:90px;left:20px;z-index:9999;
+  background:var(--white);border:1.5px solid var(--border);border-radius:14px;
+  padding:14px 18px;
+  box-shadow:var(--shadow-lg);
+  display:flex;align-items:center;gap:12px;
+  font-size:.87rem;font-weight:600;color:var(--navy);
+  max-width:290px;
+  opacity:0;transform:translateX(-20px);
+  transition:opacity .45s,transform .45s;
+  pointer-events:none;
+}
+.toast.show{opacity:1;transform:translateX(0);}
+.toast-icon{width:36px;height:36px;border-radius:50%;background:var(--off);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.toast p{line-height:1.4;}
+.toast-lbl{font-size:.74rem;font-weight:500;color:var(--muted);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .hero{min-height:unset;padding:60px 20px 40px;}
+  .hero-form-card{max-width:480px;}
+  .hardness-grid{grid-template-columns:1fr;}
+  .benefits-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,2fr);gap:32px;}
+  .steps{flex-wrap:wrap;}
+  .steps::before,.steps-line{display:none;}
+  .step{flex:0 0 50%;margin-bottom:32px;}
+  .products-grid,.product-panel.active{grid-template-columns:repeat(2,1fr);}
+  .tech-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .sticky-cta{display:flex;}
+}
+@media(max-width:600px){
+  .nav-links{display:none;}
+  .benefits-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .step{flex:0 0 100%;}
+  .products-tabs{width:100%;}
+  .ptab{flex:1;padding:12px 8px;font-size:.82rem;}
+  .product-panel.active{grid-template-columns:1fr;}
+  .tech-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .cta-buttons{flex-direction:column;align-items:center;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .toast{max-width:260px;left:12px;bottom:100px;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-track" id="tbTrack">
+    <span>Delhi-NCR water hardness averages <b>18-24 GPG</b>  -  one of India's hardest water zones</span>
+    <span>Aquvera ion-exchange removes <b>up to 99.8%</b> of hardness minerals</span>
+    <span>No electricity required <b>ever</b>  -  runs on water pressure alone</span>
+    <span>Food-grade resin &amp; NSF-certified materials <b>for safe drinking water</b></span>
+    <span>1,200+ happy families across <b>Delhi, Gurgaon, Noida &amp; Faridabad</b></span>
+    <span>Delhi-NCR water hardness averages <b>18-24 GPG</b>  -  one of India's hardest water zones</span>
+    <span>Aquvera ion-exchange removes <b>up to 99.8%</b> of hardness minerals</span>
+    <span>No electricity required <b>ever</b>  -  runs on water pressure alone</span>
+    <span>Food-grade resin &amp; NSF-certified materials <b>for safe drinking water</b></span>
+    <span>1,200+ happy families across <b>Delhi, Gurgaon, Noida &amp; Faridabad</b></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-mark">AQ</div>
+      <div class="nav-logo-text">Aqu<span>vera</span></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="#hero-form" class="nav-cta">Book Free Water Test</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero-top">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span></span>Delhi-NCR's Premium Water Softener</div>
+      <h1 class="hero-h1">
+        Experience<br>
+        <div class="rotate-wrap">
+          <div class="rotate-inner">
+            <span>Luxury Water</span>
+            <span>Silky Softness</span>
+            <span>Pure Clarity</span>
+            <span>True Wellness</span>
+          </div>
+        </div>
+      </h1>
+      <p class="hero-sub">Delhi tap water is among the hardest in India  -  18 to 24 GPG. Aquvera's ion-exchange softeners transform it into velvety, mineral-balanced water your hair, skin and appliances will thank you for.</p>
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          No Electricity
+        </div>
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Food Grade Material
+        </div>
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          1,200+ Happy Families
+        </div>
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#4AB8D8" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round"/></svg>
+          Lifetime Support
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="99.8" data-suffix="%">99.8%</div>
+          <div class="hero-stat-lbl">Hardness Removal</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="1200" data-suffix="+">1200+</div>
+          <div class="hero-stat-lbl">Homes Softened</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="0" data-suffix=" Units">0 Units</div>
+          <div class="hero-stat-lbl">Electricity Used</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="hero-form-card" id="hero-form">
+      <div class="hf-title">Get Your Free Water Test</div>
+      <div class="hf-sub">Know your water's hardness level. Book a free home visit with a water quality expert.</div>
+      <form id="leadForm" onsubmit="return handleForm(event)">
+        <div class="hf-field">
+          <label class="hf-label" for="f-name">Full Name</label>
+          <input class="hf-input" id="f-name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="hf-field">
+          <label class="hf-label" for="f-phone">Mobile Number</label>
+          <input class="hf-input" id="f-phone" type="tel" placeholder="+91 98XXX XXXXX" required>
+        </div>
+        <div class="hf-field">
+          <label class="hf-label" for="f-city">Your Area / Locality</label>
+          <input class="hf-input hf-select" id="f-city" list="city-opts" placeholder="e.g. Gurgaon Sector 56" required>
+          <datalist id="city-opts">
+            <option value="Delhi">
+            <option value="Gurgaon">
+            <option value="Noida">
+            <option value="Faridabad">
+            <option value="Greater Noida">
+            <option value="Ghaziabad">
+          </datalist>
+        </div>
+        <div class="hf-field">
+          <label class="hf-label" for="f-type">Property Type</label>
+          <select class="hf-input hf-select" id="f-type">
+            <option value="">Select type</option>
+            <option>Apartment / Flat</option>
+            <option>Independent House / Villa</option>
+            <option>Builder Floor</option>
+            <option>Office / Commercial</option>
+          </select>
+        </div>
+        <button type="submit" class="hf-btn">Book My Free Water Test</button>
+      </form>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Aquvera%2C%20I'd%20like%20a%20free%20water%20test" class="hf-wa" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Us Now
+      </a>
+      <div class="hf-privacy">&#128274; Your information is 100% private. No spam, ever.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Ion-Exchange Technology</span>
+    <span>No Electricity Required</span>
+    <span>Food Grade Resin</span>
+    <span>Silky Soft Water</span>
+    <span>Better Hair Growth</span>
+    <span>Smoother Skin</span>
+    <span>Scale-Free Appliances</span>
+    <span>Lifetime Service Support</span>
+    <span>Bathroom to Whole House</span>
+    <span>Delhi NCR Specialists</span>
+    <span>Ion-Exchange Technology</span>
+    <span>No Electricity Required</span>
+    <span>Food Grade Resin</span>
+    <span>Silky Soft Water</span>
+    <span>Better Hair Growth</span>
+    <span>Smoother Skin</span>
+    <span>Scale-Free Appliances</span>
+    <span>Lifetime Service Support</span>
+    <span>Bathroom to Whole House</span>
+    <span>Delhi NCR Specialists</span>
+  </div>
+</div>
+
+<!-- HARDNESS SECTION -->
+<section class="section hardness" id="hardness">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal">Delhi Water Reality</div>
+    <h2 class="section-h2 reveal">Your Tap Water Is Silently<br>Damaging Everything It Touches</h2>
+    <p class="section-sub reveal">Delhi-NCR groundwater carries 18 to 24 grains per gallon of calcium and magnesium  -  among the highest in India. This invisible problem causes hair fall, rough skin, clogged pipes and appliance breakdowns.</p>
+    <div class="hardness-grid">
+      <div class="hardness-map reveal from-left">
+        <h3>NCR Hardness Map</h3>
+        <p>Measured in Grains Per Gallon (GPG)  -  anything above 7 GPG is "hard water"</p>
+        <div class="hardness-bar-row">
+          <div class="hb-top"><span class="hb-city">South Delhi</span><span class="hb-val">24 GPG</span></div>
+          <div class="hb-track"><div class="hb-fill hardness-fill" data-width="96"></div></div>
+        </div>
+        <div class="hardness-bar-row">
+          <div class="hb-top"><span class="hb-city">Gurgaon</span><span class="hb-val">22 GPG</span></div>
+          <div class="hb-track"><div class="hb-fill hardness-fill" data-width="88"></div></div>
+        </div>
+        <div class="hardness-bar-row">
+          <div class="hb-top"><span class="hb-city">Noida</span><span class="hb-val">19 GPG</span></div>
+          <div class="hb-track"><div class="hb-fill hardness-fill" data-width="76"></div></div>
+        </div>
+        <div class="hardness-bar-row">
+          <div class="hb-top"><span class="hb-city">Faridabad</span><span class="hb-val">21 GPG</span></div>
+          <div class="hb-track"><div class="hb-fill hardness-fill" data-width="84"></div></div>
+        </div>
+        <div class="hardness-bar-row">
+          <div class="hb-top"><span class="hb-city">Ghaziabad</span><span class="hb-val">18 GPG</span></div>
+          <div class="hb-track"><div class="hb-fill hardness-fill" data-width="72"></div></div>
+        </div>
+        <div class="hardness-bar-row">
+          <div class="hb-top"><span class="hb-city">Greater Noida</span><span class="hb-val">20 GPG</span></div>
+          <div class="hb-track"><div class="hb-fill hardness-fill" data-width="80"></div></div>
+        </div>
+      </div>
+      <div class="hardness-facts reveal from-right">
+        <div class="hardness-fact">
+          <div class="hardness-fact-icon">&#128167;</div>
+          <div class="hardness-fact-text">
+            <h4>Hair Fall Accelerates</h4>
+            <p>Calcium ions bind to hair proteins, stripping moisture and causing 40% more breakage in hard water zones like Delhi.</p>
+          </div>
+        </div>
+        <div class="hardness-fact">
+          <div class="hardness-fact-icon">&#129529;</div>
+          <div class="hardness-fact-text">
+            <h4>Appliances Fail 3x Faster</h4>
+            <p>Scale deposits inside your geyser, washing machine and RO system cut their lifespan by up to 60% and hike electricity bills.</p>
+          </div>
+        </div>
+        <div class="hardness-fact">
+          <div class="hardness-fact-icon">&#129516;</div>
+          <div class="hardness-fact-text">
+            <h4>Soap Won't Lather</h4>
+            <p>Hard water neutralises soap and shampoo, leaving residue on skin and surfaces. You use 2x more product for half the result.</p>
+          </div>
+        </div>
+        <div class="hardness-fact">
+          <div class="hardness-fact-icon">&#128683;</div>
+          <div class="hardness-fact-text">
+            <h4>Pipes &amp; Fixtures Clog</h4>
+            <p>White scale on taps, shower heads and bathroom tiles is calcium buildup  -  expensive to remove and impossible to stop without soft water.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section" id="benefits">
+  <div class="section-inner">
+    <div class="center">
+      <div class="section-eyebrow reveal">The Aquvera Difference</div>
+      <h2 class="section-h2 reveal">Six Ways Soft Water Changes<br>Your Daily Life</h2>
+      <p class="section-sub reveal">From your morning shower to your evening dishes, soft water upgrades every water touchpoint in your home.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#128139;</div>
+        <h3>Better Hair</h3>
+        <p>Mineral-free water seals the hair cuticle, dramatically reducing frizz, breakage and hair fall. Thicker, shinier hair from week one.</p>
+        <div class="benefit-tag">Visible in 7 days</div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#10024;</div>
+        <h3>Smoother Skin</h3>
+        <p>Soft water rinses soap completely, leaving skin hydrated and soft. Many users report reduced eczema and skin dryness within weeks.</p>
+        <div class="benefit-tag">Dermatologist approved</div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#129520;</div>
+        <h3>Cleaner Fixtures</h3>
+        <p>No more white scale on taps and tiles. Fixtures stay spotless and shiny without harsh chemical scrubbing.</p>
+        <div class="benefit-tag">Zero scale buildup</div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#129396;</div>
+        <h3>Richer Lather</h3>
+        <p>Your shampoo and soap produce 2x more lather. You'll actually use less product  -  saving money every single month.</p>
+        <div class="benefit-tag">50% less soap used</div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#127968;</div>
+        <h3>Cleaner Appliances</h3>
+        <p>Geysers, washing machines and ROs last 2-3x longer without mineral buildup. Lower electricity bills, fewer breakdowns.</p>
+        <div class="benefit-tag">Extends appliance life</div>
+      </div>
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">&#128085;</div>
+        <h3>Brighter Clothes</h3>
+        <p>Soft water dissolves detergent fully  -  fabrics come out softer, colors stay vibrant and whites look whiter after every wash.</p>
+        <div class="benefit-tag">Colors last longer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="count" data-target="1200" data-suffix="+">1200+</span></div>
+      <div class="stat-lbl">Homes Served</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="count" data-target="99.8" data-suffix="%" data-decimal="1">99.8%</span></div>
+      <div class="stat-lbl">Hardness Removed</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="count" data-target="0" data-suffix=" kWh">0 kWh</span></div>
+      <div class="stat-lbl">Electricity Used</div>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="count" data-target="4" data-suffix="hr">4hr</span></div>
+      <div class="stat-lbl">Typical Install Time</div>
+      <div class="stat-divider"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how-it-works">
+  <div class="section-inner">
+    <div class="center">
+      <div class="section-eyebrow reveal">Simple Process</div>
+      <h2 class="section-h2 reveal">Soft Water in 4 Simple Steps</h2>
+      <p class="section-sub reveal">From booking to your first soft shower, Aquvera handles everything. No fuss, no mess.</p>
+    </div>
+    <div class="steps" id="stepsContainer">
+      <div class="steps-line" id="stepsLine"></div>
+      <div class="step reveal">
+        <div class="step-icon">&#128222;</div>
+        <div class="step-num">1</div>
+        <h3>Book Free Water Test</h3>
+        <p>Fill our form or WhatsApp us. Our expert visits your home at no charge to test your water's exact hardness level.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-icon">&#128300;</div>
+        <div class="step-num">2</div>
+        <h3>Get Expert Recommendation</h3>
+        <p>Based on your water hardness, home size and usage, we recommend the right Aquvera model for your needs and budget.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-icon">&#128295;</div>
+        <div class="step-num">3</div>
+        <h3>Professional Installation</h3>
+        <p>Our certified technician installs your system in 3 to 4 hours with zero mess. Works with existing plumbing.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-icon">&#128167;</div>
+        <div class="step-num">4</div>
+        <h3>Enjoy Luxury Water</h3>
+        <p>Turn on the tap and feel the difference immediately. Silky soft water across every outlet in your home, forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="section-inner">
+    <div class="center">
+      <div class="section-eyebrow reveal">Our Products</div>
+      <h2 class="section-h2 reveal">The Right Aquvera for<br>Every Home &amp; Budget</h2>
+      <p class="section-sub reveal">From single-bathroom solutions to whole-house luxury  -  all models use the same premium ion-exchange technology.</p>
+    </div>
+    <div class="products-tabs center">
+      <button class="ptab active" onclick="switchTab('bathroom',this)">Bathroom</button>
+      <button class="ptab" onclick="switchTab('whole',this)">Whole House</button>
+      <button class="ptab" onclick="switchTab('commercial',this)">Commercial</button>
+    </div>
+
+    <!-- BATHROOM -->
+    <div class="product-panel active" id="tab-bathroom">
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#128701;</div>
+        <div class="prod-model">AQ-600 / AQ-600-BT</div>
+        <div class="prod-name">Bathroom Softener</div>
+        <div class="prod-use">1 Bathroom · Best Seller</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">6 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Water per Regen</span><span class="prod-spec-val">1,100-1,200 L</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Technology</span><span class="prod-spec-val">Ion Exchange</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Book Free Demo</button>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#128701;</div>
+        <div class="prod-model">AQ-1000</div>
+        <div class="prod-name">Bathroom Plus</div>
+        <div class="prod-use">1-2 Bathrooms</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">10 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Water per Regen</span><span class="prod-spec-val">1,800-2,000 L</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Technology</span><span class="prod-spec-val">Ion Exchange</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Book Free Demo</button>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#128701;</div>
+        <div class="prod-model">AQ-1500</div>
+        <div class="prod-name">Multi-Bath</div>
+        <div class="prod-use">2-3 Bathrooms</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">15 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Water per Regen</span><span class="prod-spec-val">2,700-3,000 L</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Technology</span><span class="prod-spec-val">Ion Exchange</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Book Free Demo</button>
+      </div>
+    </div>
+
+    <!-- WHOLE HOUSE -->
+    <div class="product-panel" id="tab-whole">
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#127968;</div>
+        <div class="prod-model">AQ-2000</div>
+        <div class="prod-name">Home Starter</div>
+        <div class="prod-use">Small Home (2-3 BHK)</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">20 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Water per Regen</span><span class="prod-spec-val">3,600-4,000 L</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Coverage</span><span class="prod-spec-val">Full House</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Book Free Demo</button>
+      </div>
+      <div class="prod-card popular reveal">
+        <div class="popular-badge">Most Popular</div>
+        <div class="prod-icon">&#127968;</div>
+        <div class="prod-model">AQ-2500</div>
+        <div class="prod-name">Home Premium</div>
+        <div class="prod-use">Medium Home (3-4 BHK)</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">25 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Water per Regen</span><span class="prod-spec-val">4,500-5,000 L</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Coverage</span><span class="prod-spec-val">Full House</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Book Free Demo</button>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#127968;</div>
+        <div class="prod-model">AQ-5000</div>
+        <div class="prod-name">Home Luxury</div>
+        <div class="prod-use">Large Home / Villa</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">50 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Water per Regen</span><span class="prod-spec-val">9,000-10,000 L</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Coverage</span><span class="prod-spec-val">Full House</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Book Free Demo</button>
+      </div>
+    </div>
+
+    <!-- COMMERCIAL -->
+    <div class="product-panel" id="tab-commercial">
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#127963;</div>
+        <div class="prod-model">AQ-7500</div>
+        <div class="prod-name">Villa / Office</div>
+        <div class="prod-use">Large Villa or Office</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">75 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Application</span><span class="prod-spec-val">Residential + Office</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Technology</span><span class="prod-spec-val">Ion Exchange</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Get Custom Quote</button>
+      </div>
+      <div class="prod-card popular reveal">
+        <div class="popular-badge">Best Value</div>
+        <div class="prod-icon">&#127963;</div>
+        <div class="prod-model">AQ-10000</div>
+        <div class="prod-name">Commercial Pro</div>
+        <div class="prod-use">Apartment Complex / Hotel</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Resin Capacity</span><span class="prod-spec-val">100 Litres</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Application</span><span class="prod-spec-val">Commercial</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Technology</span><span class="prod-spec-val">Ion Exchange</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Electricity</span><span class="prod-spec-val">Not Required</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Get Custom Quote</button>
+      </div>
+      <div class="prod-card reveal">
+        <div class="prod-icon">&#127963;</div>
+        <div class="prod-model">Custom Systems</div>
+        <div class="prod-name">Enterprise Solution</div>
+        <div class="prod-use">Bulk / Custom Requirements</div>
+        <div class="prod-specs">
+          <div class="prod-spec"><span class="prod-spec-label">Capacity</span><span class="prod-spec-val">As Required</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Application</span><span class="prod-spec-val">Any Commercial</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Technology</span><span class="prod-spec-val">Ion Exchange</span></div>
+          <div class="prod-spec"><span class="prod-spec-label">Support</span><span class="prod-spec-val">Dedicated Manager</span></div>
+        </div>
+        <button class="prod-btn" onclick="scrollToForm()">Talk to Expert</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="section tech" id="technology">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal" style="color:var(--teal-lt)">The Science</div>
+    <h2 class="section-h2 reveal" style="color:var(--white)">Premium Technology.<br>Zero Compromise.</h2>
+    <p class="section-sub reveal" style="color:rgba(255,255,255,.65)">Aquvera uses proven ion-exchange science refined for Delhi-NCR's uniquely hard water. No electricity, no complex maintenance, no downtime.</p>
+    <div class="tech-grid">
+      <div class="tech-features">
+        <div class="tech-feat reveal">
+          <div class="tech-feat-icon">&#9889;</div>
+          <div class="tech-feat-text">
+            <h4>Zero Electricity</h4>
+            <p>Runs entirely on your home's water pressure. No power connection needed, no electricity bills, no risk of outages.</p>
+          </div>
+        </div>
+        <div class="tech-feat reveal">
+          <div class="tech-feat-icon">&#9881;</div>
+          <div class="tech-feat-text">
+            <h4>Ion-Exchange Resin</h4>
+            <p>Food-grade, NSF-certified resin beads swap calcium and magnesium ions for sodium ions, producing perfectly soft water.</p>
+          </div>
+        </div>
+        <div class="tech-feat reveal">
+          <div class="tech-feat-icon">&#128167;</div>
+          <div class="tech-feat-text">
+            <h4>Auto-Regeneration</h4>
+            <p>The resin regenerates automatically with common salt brine  -  restoring full softening capacity with zero effort from you.</p>
+          </div>
+        </div>
+        <div class="tech-feat reveal">
+          <div class="tech-feat-icon">&#128205;</div>
+          <div class="tech-feat-text">
+            <h4>Delhi-Optimised</h4>
+            <p>Resin volumes and cycle times calibrated specifically for Delhi-NCR's 18-24 GPG hardness range for peak efficiency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tech-visual reveal from-right">
+        <div class="tech-vis-title">What Aquvera Removes</div>
+        <div class="filter-row">
+          <div class="fr-labels"><span class="fr-name">Calcium Hardness</span><span class="fr-pct">99.8%</span></div>
+          <div class="fr-track"><div class="fr-bar filter-bar" data-width="99.8"></div></div>
+        </div>
+        <div class="filter-row">
+          <div class="fr-labels"><span class="fr-name">Magnesium</span><span class="fr-pct">99.5%</span></div>
+          <div class="fr-track"><div class="fr-bar filter-bar" data-width="99.5"></div></div>
+        </div>
+        <div class="filter-row">
+          <div class="fr-labels"><span class="fr-name">Scale Deposits</span><span class="fr-pct">100%</span></div>
+          <div class="fr-track"><div class="fr-bar filter-bar" data-width="100"></div></div>
+        </div>
+        <div class="filter-row">
+          <div class="fr-labels"><span class="fr-name">Soap Scum</span><span class="fr-pct">95%</span></div>
+          <div class="fr-track"><div class="fr-bar filter-bar" data-width="95"></div></div>
+        </div>
+        <div class="filter-row">
+          <div class="fr-labels"><span class="fr-name">Pipe Scale Buildup</span><span class="fr-pct">98%</span></div>
+          <div class="fr-track"><div class="fr-bar filter-bar" data-width="98"></div></div>
+        </div>
+        <div class="tech-cert">
+          <div class="cert-pill">NSF Certified</div>
+          <div class="cert-pill">Food Grade Resin</div>
+          <div class="cert-pill">ISO 9001</div>
+          <div class="cert-pill">BIS Approved</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="section-inner">
+    <div class="center">
+      <div class="section-eyebrow reveal">What Families Say</div>
+      <h2 class="section-h2 reveal">1,200+ Happy Homes<br>Across Delhi-NCR</h2>
+    </div>
+  </div>
+  <div class="reviews-track-outer">
+    <div class="reviews-track" id="reviewTrack">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"My hair fall has reduced by almost 70% since we installed the AQ-2500. It has been 3 months and the difference is night and day. I never thought soft water could change so much."</div>
+        <div class="review-name">Priya Sharma</div>
+        <div class="review-loc">South Delhi, AQ-2500</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"Our geyser used to give trouble every winter due to scale. After Aquvera, it has been 18 months with zero service calls. The savings alone paid for the softener."</div>
+        <div class="review-name">Rajesh Gupta</div>
+        <div class="review-loc">Gurgaon Sector 56, AQ-5000</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"Installation was done in under 4 hours, very clean, no mess. The water instantly felt different  -  soft and smooth. Kids' eczema has improved a lot too."</div>
+        <div class="review-name">Anita Mehta</div>
+        <div class="review-loc">Noida Sector 62, AQ-2000</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"I installed the bathroom unit AQ-600 in my 1BHK. Skin feels so much better and my tiles are finally staying clean. Wish I had done this 5 years ago."</div>
+        <div class="review-name">Vikram Singh</div>
+        <div class="review-loc">Faridabad, AQ-600</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"Our apartment society took a group deal for AQ-10000 for the whole building. Best decision we made. The maintenance team is responsive and the water quality is excellent."</div>
+        <div class="review-name">Rohan Kapoor</div>
+        <div class="review-loc">Greater Noida, AQ-10000</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"The free water test showed our hardness at 22 GPG  -  that was shocking. Three weeks after installation, no more white deposits on bathroom fixtures. Absolutely love it."</div>
+        <div class="review-name">Sunita Arora</div>
+        <div class="review-loc">Ghaziabad, AQ-1500</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"My hair fall has reduced by almost 70% since we installed the AQ-2500. It has been 3 months and the difference is night and day. I never thought soft water could change so much."</div>
+        <div class="review-name">Priya Sharma</div>
+        <div class="review-loc">South Delhi, AQ-2500</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"Our geyser used to give trouble every winter due to scale. After Aquvera, it has been 18 months with zero service calls. The savings alone paid for the softener."</div>
+        <div class="review-name">Rajesh Gupta</div>
+        <div class="review-loc">Gurgaon Sector 56, AQ-5000</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"Installation was done in under 4 hours, very clean, no mess. The water instantly felt different  -  soft and smooth. Kids' eczema has improved a lot too."</div>
+        <div class="review-name">Anita Mehta</div>
+        <div class="review-loc">Noida Sector 62, AQ-2000</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"I installed the bathroom unit AQ-600 in my 1BHK. Skin feels so much better and my tiles are finally staying clean. Wish I had done this 5 years ago."</div>
+        <div class="review-name">Vikram Singh</div>
+        <div class="review-loc">Faridabad, AQ-600</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"Our apartment society took a group deal for AQ-10000 for the whole building. Best decision we made. The maintenance team is responsive and the water quality is excellent."</div>
+        <div class="review-name">Rohan Kapoor</div>
+        <div class="review-loc">Greater Noida, AQ-10000</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">"The free water test showed our hardness at 22 GPG  -  that was shocking. Three weeks after installation, no more white deposits on bathroom fixtures. Absolutely love it."</div>
+        <div class="review-name">Sunita Arora</div>
+        <div class="review-loc">Ghaziabad, AQ-1500</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY AQUVERA -->
+<section class="section" id="why">
+  <div class="section-inner">
+    <div class="center">
+      <div class="section-eyebrow reveal">Why Aquvera</div>
+      <h2 class="section-h2 reveal">Built for Delhi's Water.<br>Designed for Luxury Living.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">&#127970;</div>
+        <h4>Delhi-NCR Specialists</h4>
+        <p>Calibrated specifically for 18-24 GPG Delhi water. Not a generic product  -  a local solution.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">&#128295;</div>
+        <h4>Certified Installers</h4>
+        <p>All installs by trained technicians. Clean, quick and backed by a service guarantee.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">&#9889;</div>
+        <h4>No Running Costs</h4>
+        <p>Zero electricity. Only cost is common salt for regeneration  -  roughly Rs. 100 per month.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">&#128222;</div>
+        <h4>Lifetime Support</h4>
+        <p>WhatsApp or call us anytime. Our team typically responds within 2 hours for service requests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      NSF Certified Materials
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Food Grade Resin
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#4AB8D8" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round"/></svg>
+      4-Hour Installation
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      1,200+ Families
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      2-Hour Support Response
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div style="max-width:700px;margin:0 auto;">
+    <h2>Ready for Luxury Soft Water<br>in Your Home?</h2>
+    <p>Book your free water test today. Our expert visits at your convenience, tests your water on the spot, and recommends the right Aquvera model for your home.</p>
+    <div class="cta-buttons">
+      <button class="cta-btn-main" onclick="scrollToForm()">Book Free Water Test</button>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Aquvera%2C%20I'd%20like%20to%20book%20a%20free%20water%20test" class="cta-btn-wa" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-mark">AQ</div>
+        <div class="footer-logo-text">Aqu<span>vera</span></div>
+      </div>
+      <div class="footer-tagline">Delhi-NCR's premium water softener brand. Transforming hard water into a luxury experience with zero electricity and food-grade technology.</div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        +91 98XXX XXXXX
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        info@theaquvera.com
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#4AB8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="#4AB8D8" stroke-width="2"/></svg>
+        Delhi-NCR, India
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Products</div>
+      <a class="footer-link" href="#products">AQ-600 Bathroom</a>
+      <a class="footer-link" href="#products">AQ-1000 Bathroom Plus</a>
+      <a class="footer-link" href="#products">AQ-2500 Whole House</a>
+      <a class="footer-link" href="#products">AQ-5000 Luxury Home</a>
+      <a class="footer-link" href="#products">AQ-10000 Commercial</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <a class="footer-link" href="#benefits">Benefits</a>
+      <a class="footer-link" href="#how-it-works">How It Works</a>
+      <a class="footer-link" href="#technology">Technology</a>
+      <a class="footer-link" href="#reviews">Reviews</a>
+      <a class="footer-link" href="#hero-form">Book Free Test</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 Aquvera Water Solutions. All rights reserved.</span>
+    <div style="display:flex;gap:20px;">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Warranty Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <button class="sticky-cta-btn sticky-cta-main" onclick="scrollToForm()">Book Free Water Test</button>
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Aquvera" class="sticky-cta-btn sticky-cta-wa" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <div class="toast-icon" id="toastIcon">&#127968;</div>
+  <div>
+    <p id="toastMsg">Priya from Gurgaon just booked a free water test</p>
+    <span class="toast-lbl" id="toastTime">2 minutes ago</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ===== MOBILE DETECTION ===== */
+  var isMobile = window.innerWidth <= 960 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+  /* ===== CANVAS BUBBLES ===== */
+  var canvas = document.getElementById('hero-canvas');
+  var ctx = canvas.getContext('2d');
+  var bubbles = [];
+  function resizeCanvas(){
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  for(var i=0;i<50;i++){
+    bubbles.push({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      r: Math.random()*3+1,
+      sp: Math.random()*0.4+0.15,
+      op: Math.random()*0.4+0.1
+    });
+  }
+  function drawBubbles(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    bubbles.forEach(function(b){
+      ctx.beginPath();
+      ctx.arc(b.x,b.y,b.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(74,184,216,'+b.op+')';
+      ctx.fill();
+      b.y -= b.sp;
+      if(b.y+b.r < 0){b.y=canvas.height+b.r;b.x=Math.random()*canvas.width;}
+    });
+    requestAnimationFrame(drawBubbles);
+  }
+  drawBubbles();
+
+  /* ===== NAV SCROLL ===== */
+  var nav = document.getElementById('mainNav');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  /* ===== STICKY MOBILE CTA ===== */
+  var stickyCta = document.getElementById('stickyCta');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY > 500 && window.innerWidth <= 960) stickyCta.style.display='flex';
+    else stickyCta.style.display='none';
+  });
+
+  /* ===== REVEAL ANIMATIONS (desktop only) ===== */
+  if(!isMobile){
+    document.body.classList.add('will-animate');
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    },{threshold:0.06,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+  }
+
+  /* ===== HARDNESS BARS ===== */
+  var hbObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.hardness-fill').forEach(function(b){
+          setTimeout(function(){ b.style.width = b.dataset.width + '%'; },100);
+        });
+        hbObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:0.2});
+  var hbSection = document.getElementById('hardness');
+  if(hbSection) hbObserver.observe(hbSection);
+
+  /* ===== FILTER BARS ===== */
+  var fbObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.filter-bar').forEach(function(b){
+          setTimeout(function(){ b.style.width = b.dataset.width + '%'; },150);
+        });
+        fbObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:0.2});
+  var techSection = document.getElementById('technology');
+  if(techSection) fbObserver.observe(techSection);
+
+  /* ===== STEPS LINE DRAW ===== */
+  var stepLine = document.getElementById('stepsLine');
+  var stepsObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && stepLine){
+        stepLine.style.width = 'calc(100% - ' + (2*24 + 2*(canvas.width/6)) + 'px)';
+        setTimeout(function(){ stepLine.style.width = '67%'; },100);
+        stepsObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.3});
+  var stepsContainer = document.getElementById('stepsContainer');
+  if(stepsContainer) stepsObs.observe(stepsContainer);
+
+  /* ===== COUNT-UP ===== */
+  function countUp(el){
+    var target = parseFloat(el.dataset.target);
+    var suffix = el.dataset.suffix || '';
+    var decimal = parseInt(el.dataset.decimal)||0;
+    var duration = 1600;
+    var start = performance.now();
+    function tick(now){
+      var progress = Math.min((now-start)/duration, 1);
+      var eased = 1 - Math.pow(1-progress, 3);
+      var val = target * eased;
+      el.textContent = (decimal ? val.toFixed(decimal) : Math.floor(val)) + suffix;
+      if(progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var countObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.count').forEach(countUp);
+        countObs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.3});
+  document.querySelectorAll('.stats-band').forEach(function(s){ countObs.observe(s); });
+
+  /* ===== PRODUCT TABS ===== */
+  window.switchTab = function(tab, btn){
+    document.querySelectorAll('.product-panel').forEach(function(p){ p.classList.remove('active'); });
+    document.querySelectorAll('.ptab').forEach(function(b){ b.classList.remove('active'); });
+    document.getElementById('tab-'+tab).classList.add('active');
+    btn.classList.add('active');
+  };
+
+  /* ===== FORM ===== */
+  window.handleForm = function(e){
+    e.preventDefault();
+    var btn = document.querySelector('.hf-btn');
+    btn.textContent = 'Booking... ';
+    setTimeout(function(){
+      btn.textContent = 'Booked! We\'ll call you soon ';
+      btn.style.background = '#22C55E';
+    }, 800);
+    return false;
+  };
+
+  /* ===== SCROLL TO FORM ===== */
+  window.scrollToForm = function(){
+    document.getElementById('hero-form').scrollIntoView({behavior:'smooth',block:'center'});
+  };
+
+  /* ===== TOASTS ===== */
+  var toasts = [
+    {icon:'&#127968;',msg:'Priya from Gurgaon just booked a free water test',time:'2 minutes ago'},
+    {icon:'&#128167;',msg:'Rajesh from Noida installed the AQ-2500 today',time:'7 minutes ago'},
+    {icon:'&#10024;',msg:'Anita from South Delhi left a 5-star review',time:'14 minutes ago'},
+    {icon:'&#129529;',msg:'Vikram from Faridabad saved his geyser with AQ-5000',time:'22 minutes ago'},
+    {icon:'&#127970;',msg:'A housing society in Greater Noida ordered AQ-10000',time:'31 minutes ago'},
+    {icon:'&#128139;',msg:'Sunita from Ghaziabad noticed less hair fall in week 1',time:'45 minutes ago'},
+  ];
+  var ti = 0;
+  var toastEl = document.getElementById('toast');
+  var toastIcon = document.getElementById('toastIcon');
+  var toastMsg = document.getElementById('toastMsg');
+  var toastTime = document.getElementById('toastTime');
+  function showToast(){
+    var t = toasts[ti % toasts.length]; ti++;
+    toastIcon.innerHTML = t.icon;
+    toastMsg.textContent = t.msg;
+    toastTime.textContent = t.time;
+    toastEl.classList.add('show');
+    setTimeout(function(){ toastEl.classList.remove('show'); }, 4500);
+  }
+  setTimeout(showToast, 4000);
+  setInterval(showToast, 9000);
+
+})();
+</script>
+</body>
+</html>
